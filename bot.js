@@ -1,8 +1,8 @@
 // Configurations
 const cfConfig = {
   cssBase:
-    getElemById("contactform").src.split("/src")[0] ||
-    "https://cdn.jsdelivr.net/gh/cachecleanerjeet/contact-form@master",
+    getElemById("contactform").src.split("/")[0] ||
+    "https://cdn.jsdelivr.net/gh/cyberassemble/blogger@main",
   error: {
     title: "Error",
     message:
@@ -33,7 +33,7 @@ const cfform = `
 	<input class="element" onchange="cfonChange('cfphone')" id="cfphone" type="number" name="phoneno" placeholder="Phone No" autocomplete="off">
 	<input class="element" onchange="cfonChange('cfsubject')" id="cfsubject" type="text" name="subject" placeholder="Subject" autocomplete="off">
 	<textarea class="element" onchange="cfonChange('cfmessage')" id="cfmessage" name="message" placeholder="Your message"></textarea>
-	<button id="cfbutton" onclick="cfSubmitMessage()" class="form-button color">Send your message</button><a href="https://t.me/cyberxbd" class="cfpromo">Powered by CyberXBD</a>
+	<button id="cfbutton" onclick="cfSubmitMessage()" class="form-button color">Send your message</button>
 </div>
 `;
 
@@ -43,7 +43,7 @@ window.onload = () => {
   // Add stylesheet
   var cfstylesheet = document.createElement("link");
   cfstylesheet.rel = "stylesheet";
-  cfstylesheet.href = `${cfConfig.cssBase}/src/style.min.css`;
+  cfstylesheet.href = `${cfConfig.cssBase}/bot.css`;
   document.getElementsByTagName("head")[0].appendChild(cfstylesheet);
 
   cfstylesheet.onload = function () {
